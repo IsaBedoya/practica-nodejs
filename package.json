@@ -1,0 +1,39 @@
+{
+  "name": "practica1",
+  "version": "1.0.0",
+  "description": "practica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "practica",
+    "templateEngines"
+  ],
+  "author": "Isabela",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.0.0",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.1",
+    "formidable": "^3.5.0",
+    "jimp": "^0.3.5",
+    "moment": "^2.29.4",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.3.1",
+    "nanoid": "^3.3.4",
+    "nodemailer": "^6.9.4",
+    "nodemon": "^3.0.1",
+    "passport": "^0.6.0"
+  }
+}

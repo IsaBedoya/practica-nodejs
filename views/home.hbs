@@ -1,0 +1,11 @@
+<h1 style="font-family: sans-serif; color: blue;">Agregue sus URLs</h1>
+
+{{> Form}}
+
+{{!-- Se crea una especie de for each. Al escribir hh aparece como recomendacion el #each, por lo que no hace falta escribir todo --}}
+{{!-- El > card url=this se usa para traer el elemento de components/card.hbs y el this para que este funcione--}}
+{{!-- El url=this se llama props, funcionan como en react, vue, etc --}}
+{{#each urls }}
+    {{> Card url=this}} 
+{{/each}}
+

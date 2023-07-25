@@ -1,0 +1,9 @@
+<div class="card w-75 mb-3" style="margin: 30px;">
+  <div class="card-body">
+    <p class="card-title">{{url.origin}}</p>
+    <p class="card-text">{{url.shortURL}}</p>
+    <a href="/eliminar/{{url._id}}" class="btn btn-danger">Eliminar</a>
+    <a href="/editar/{{url._id}}" class="btn btn-warning">Editar</a>
+    <button data-short="{{url.shortURL}}" href="#" class="btn btn-info">Copiar</button>
+  </div>
+</div>
