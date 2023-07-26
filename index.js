@@ -17,11 +17,12 @@ const app = express();
 
 const corsOptions = {
     credentials: true,
-    origin: process.env.PATH_HEROKU || '*',
+    origin: process.env.PATH_PUBLIC || '*',
     methods: ['GET', 'POST'] // Metodos aceptados
 };
 app.use(cors(corsOptions));
 
+app.set("trust proxy", 1);
 app.use(session({ // Traemos el middelware session
     secret: process.env.SECRET_SESSION,
     resave: false,

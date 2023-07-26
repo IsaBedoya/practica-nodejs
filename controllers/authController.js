@@ -36,7 +36,7 @@ const registerUser = async(req,res) =>{
             from: '"Fred Foo 👻" <foo@example.com>',
             to: user.userEmail,
             subject: "verifique su cuenta de correo",
-            html: `<a href="${process.env.PATH_HEROKU || 'http://localhost:5000'}/auth/confirmar/${user.tokenConfirm}">verifica tu cuenta aquí</a>`,
+            html: `<a href="${process.env.PATH_PUBLIC || 'http://localhost:5000'}auth/confirmar/${user.tokenConfirm}">verifica tu cuenta aquí</a>`,
         });
 
         req.flash('mensajes',[{msg:'Revisa tu correo electronico y valida la cuenta'}])
