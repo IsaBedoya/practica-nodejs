@@ -35,8 +35,8 @@ const registerUser = async(req,res) =>{
         await transport.sendMail({ // Envía el email
             from: '"Fred Foo 👻" <foo@example.com>',
             to: user.userEmail,
-            subject: "verifique su cuenta de correo",
-            html: `<a href="${process.env.PATH_PUBLIC || 'http://localhost:5000'}auth/confirmar/${user.tokenConfirm}">verifica tu cuenta aquí</a>`,
+            subject: "Verifique su cuenta de correo",
+            html: `<a href="${process.env.PATH_PUBLIC || 'http://localhost:5000'}auth/confirmar/${user.tokenConfirm}">Verifica tu cuenta aquí</a>`,
         });
 
         req.flash('mensajes',[{msg:'Revisa tu correo electronico y valida la cuenta'}])
@@ -52,7 +52,7 @@ const confirmar = async(req,res) =>{
 
     try {
         const user = await User.findOne({ tokenConfirm: token });
-        if (!user) throw new Error("no se pudo confirmar cuenta");
+        if (!user) throw new Error("No se pudo confirmar cuenta");
         user.tokenConfirm = null;
         user.confirm = true;
         await user.save();

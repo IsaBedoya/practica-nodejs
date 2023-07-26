@@ -10,4 +10,4 @@ const clientDB = mongoose
     })
     .catch((err)=>{console.log('Falló la conexión con la DB ' + err)})
 
-    module.exports = clientDB;
+module.exports = clientDB;

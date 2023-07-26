@@ -3,7 +3,6 @@ const Jimp = require('jimp')
 const path = require('path'); // Interpreta las rutas
 const fs = require('fs');
 const User = require('../models/User');
-// const Jimp = require("jimp");
 
 const formPerfil = async(req, res) => {
     try {

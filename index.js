@@ -15,6 +15,10 @@ const clientDB = require("./database/db");
 
 const app = express();
 
+const csrfProtection = csrf({
+    cookie: false,
+  });
+
 const corsOptions = {
     credentials: true,
     origin: process.env.PATH_PUBLIC || '*',
@@ -67,6 +71,8 @@ app.use((req, res, next) => {
     res.locals.mensajes = req.flash('mensajes')
     next();
 });
+
+app.use(csrfProtection);
 
 app.use('/', require('./routes/home'))
 app.use('/auth', require('./routes/auth'))
